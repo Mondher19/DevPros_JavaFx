@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Guii.ListTournoiController">
+   <children>
+      <TableView fx:id="TournoiTable" layoutX="20.0" layoutY="140.0" prefHeight="290.0" prefWidth="925.0">
+         <columns>
+            <TableColumn fx:id="idcoll" maxWidth="200.0" style="-fx-alignment: center;" text="id" />
+            <TableColumn fx:id="vueColl" maxWidth="200.0" prefWidth="200.0" style="-fx-alignment: center;" text="Nom" />
+            <TableColumn fx:id="descriptionColl" maxWidth="300.0" prefWidth="201.0" style="-fx-alignment: center;" text="Descriptions" />
+            <TableColumn fx:id="nbrColl" prefWidth="226.0" text="Joueur" />
+            <TableColumn fx:id="actionsColl" maxWidth="217.0" prefWidth="217.0" style="-fx-alignment: center;" text="Actions" />
+         </columns>
+      </TableView>
+      <Pane layoutX="10.0" layoutY="71.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" />
+      <Text layoutX="45.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Tournoi">
+         <font>
+            <Font name="Book Antiqua Italic" size="36.0" />
+         </font>
+      </Text>
+      <Button layoutX="169.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#refreshTable" prefHeight="31.0" prefWidth="82.0" text="Refresh" textAlignment="CENTER" textFill="#e10808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="71.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#getAdd" text="Ajouter" textFill="#d91c1c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="917.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#close" text="Close" />
+      <Button layoutX="290.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#getAdd1" text="modifier" textFill="#d91c1c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
