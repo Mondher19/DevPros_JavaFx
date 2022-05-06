@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -10,7 +14,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Guii.ListTournoiController">
    <children>
-      <TableView fx:id="TournoiTable" layoutX="20.0" layoutY="140.0" prefHeight="290.0" prefWidth="925.0">
+      <TableView fx:id="TournoiTable" layoutX="20.0" layoutY="140.0" prefHeight="290.0" prefWidth="925.0" stylesheets="@../Values/style.css">
          <columns>
             <TableColumn fx:id="idcoll" maxWidth="200.0" style="-fx-alignment: center;" text="id" />
             <TableColumn fx:id="vueColl" maxWidth="200.0" prefWidth="200.0" style="-fx-alignment: center;" text="Nom" />
@@ -20,26 +24,74 @@
          </columns>
       </TableView>
       <Pane layoutX="10.0" layoutY="71.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" />
-      <Text layoutX="45.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Tournoi">
+      <Text fx:id="titre" layoutX="45.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Tournoi">
          <font>
-            <Font name="Book Antiqua Italic" size="36.0" />
+            <Font name="Baskerville Old Face" size="36.0" />
          </font>
       </Text>
-      <Button layoutX="169.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#refreshTable" prefHeight="31.0" prefWidth="82.0" text="Refresh" textAlignment="CENTER" textFill="#e10808">
+      <Button layoutX="134.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#refreshTable" prefHeight="46.0" prefWidth="69.0" styleClass="my-button" stylesheets="@../Values/style.css" textAlignment="CENTER" textFill="#e10808">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
+         <graphic>
+            <ImageView fx:id="refrechbtn" fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <Button layoutX="71.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#getAdd" text="Ajouter" textFill="#d91c1c">
+      <Button fx:id="ajoutbtn" layoutX="83.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#getAdd" styleClass="my-button" stylesheets="@../Values/style.css" textFill="#d91c1c">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <Button layoutX="917.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#close" text="Close" />
-      <Button layoutX="290.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#getAdd1" text="modifier" textFill="#d91c1c">
+      <Button layoutX="917.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#close" styleClass="add-btn" stylesheets="@../Values/style.css" text="x" />
+      <Button layoutX="213.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#getAdd1" styleClass="my-button" stylesheets="@../Values/style.css" textFill="#d91c1c">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
+      <TextField fx:id="tfsearchmember" layoutX="414.0" layoutY="97.0" onKeyPressed="#search" />
+      <Button layoutX="687.0" layoutY="75.0" mnemonicParsing="false" onAction="#trierProduit" styleClass="my-button" stylesheets="@../Values/style.css">
+         <graphic>
+            <ImageView fitHeight="90.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/sort-descending.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="imprimebtn" layoutX="766.0" layoutY="65.0" mnemonicParsing="false" onAction="#imprimerTable" prefHeight="72.0" prefWidth="73.0" styleClass="my-button" stylesheets="@../Values/style.css">
+         <graphic>
+            <ImageView fitHeight="62.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/printer.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="858.0" layoutY="66.0" mnemonicParsing="false" onAction="#stat" styleClass="my-button" stylesheets="@../Values/style.css">
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/statistiques.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="325.0" layoutY="102.0" text="Recherche" />
    </children>
 </AnchorPane>

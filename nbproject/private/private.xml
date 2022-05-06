@@ -3,21 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/services/IType_Tournoi.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/pidevjava/PersonnesFXMain.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/services/TournoiServices.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/entities/Type_Tournoi.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/entities/Tournoi.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/pidevjava/PidevJava.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/services/Type_TournoiService.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/Guii/AjouterTournoiController.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/utils/MyDB.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/Guii/listTournoi.fxml</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/Guii/ModifierTournoiController.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/Guii/AjouterTournoi.fxml</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/Guii/ListTournoiController.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/services/ITournoi.java</file>
-            <file>file:/C:/Users/Adem_/Downloads/wetransfer_pidevjava_2022-04-20_1944/PidevJava/src/Guii/ModifierTournoi.fxml</file>
+            <file>file:/C:/Users/Adem_/Downloads/DevPros_PiDev_JavaFx-Adam_JavaFx/DevPros_PiDev_JavaFx-Adam_JavaFx/src/Guii/AjouterTournoiController.java</file>
+            <file>file:/C:/Users/Adem_/Downloads/DevPros_PiDev_JavaFx-Adam_JavaFx/DevPros_PiDev_JavaFx-Adam_JavaFx/src/utils/email.java</file>
+            <file>file:/C:/Users/Adem_/Downloads/DevPros_PiDev_JavaFx-Adam_JavaFx/DevPros_PiDev_JavaFx-Adam_JavaFx/src/Mail/Mailing.java</file>
+            <file>file:/C:/Users/Adem_/Downloads/DevPros_PiDev_JavaFx-Adam_JavaFx/DevPros_PiDev_JavaFx-Adam_JavaFx/src/Mail/MailUtil.java</file>
+            <file>file:/C:/Users/Adem_/Downloads/DevPros_PiDev_JavaFx-Adam_JavaFx/DevPros_PiDev_JavaFx-Adam_JavaFx/src/Guii/ListTournoiController.java</file>
         </group>
     </open-files>
 </project-private>

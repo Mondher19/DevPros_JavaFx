@@ -5,6 +5,8 @@
  */
 package Guii;
 
+import animatefx.animation.Bounce;
+import animatefx.animation.GlowText;
 import entities.Tournoi;
 import java.net.URL;
 import java.sql.Connection;
@@ -21,16 +23,23 @@ import static javafx.beans.binding.Bindings.isEmpty;
 import static javafx.beans.binding.Bindings.isEmpty;
 import static javafx.beans.binding.Bindings.isEmpty;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.util.Duration;
 import javax.swing.JOptionPane;
+import org.controlsfx.control.Notifications;
 import services.TournoiServices;
+import utils.email;
 
 /**
  * FXML Controller class
@@ -56,6 +65,10 @@ public class AjouterTournoiController implements Initializable {
     private TextField ttour;
     @FXML
     private TextField tnbr;
+    @FXML
+    private Button ajoutbtn;
+    @FXML
+    private Label titre;
 
     /**
      * Initializes the controller class.
@@ -74,8 +87,9 @@ public class AjouterTournoiController implements Initializable {
     }
     
     
-     @FXML
     private void update(ActionEvent event) {
+            new GlowText(titre, Color.BLACK, Color.WHITE).play();
+            new Bounce(ajoutbtn).play();
         TournoiServices sp = new TournoiServices();
 
             String nom=  ttour.getText();
@@ -106,6 +120,7 @@ public class AjouterTournoiController implements Initializable {
     private void BtnAjouterP(ActionEvent event) {
         Tournoi p = new Tournoi(Integer.parseInt(tnbr.getText()),ttour.getText(), tdescription.getText());
          TournoiServices ps = new  TournoiServices();
+    
         String vue = ttour.getText();
         String nbr = tnbr.getText();
         String desc = tdescription.getText();
@@ -127,10 +142,6 @@ public class AjouterTournoiController implements Initializable {
                 else if ( vue != desc ){
                         
                         ps.ajouterTournoi(p);
-                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                            alert.setTitle("Succes");
-                            alert.setContentText("Emplacement ajouté");
-                            alert.show();
                             ttour.setText("");
                             tnbr.setText("");
                             tdescription.setText("");}
@@ -139,14 +150,28 @@ public class AjouterTournoiController implements Initializable {
                 }
                
            
-
+             email n = new email();
+            n.s(); 
         }
 
-             
+            
             
          catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
+        
+                 Notifications notificationBuilder = Notifications.create()
+                    .title("Tournoi")
+                    .text("Votre Tournoi est Ajouter")//affichage notif
+                    .graphic(null)
+                    .hideAfter(Duration.seconds(50))
+                    .position(Pos.TOP_RIGHT)
+                    .onAction(new EventHandler<ActionEvent>() {
+                        public void handle(ActionEvent event) {
+                            System.out.println("Clicked on notif");
+                        }
+                    });
+            notificationBuilder.showConfirm();
     }
 
     

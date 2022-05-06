@@ -127,4 +127,67 @@ public class TournoiServices implements ITournoi<Tournoi> {
         ps.executeUpdate();
     }
 
+     
+      public ArrayList<Tournoi> TrierParId() {
+
+        ArrayList<Tournoi> List = new ArrayList<>();
+        try {
+
+//            String requete = "select * from membre where role != 'Admin' ORDER BY id DESC ";
+            String req = "select * from tournoi ORDER BY nom_tour";
+          PreparedStatement pre = connexion.prepareStatement(req);
+
+            ResultSet rs = pre.executeQuery(req);
+
+            while (rs.next()) {
+                Tournoi m = new Tournoi();
+
+               
+                m.setNom_tour(rs.getString("nom_tour"));
+                m.setNbr_joueur(rs.getInt("nbr_joueur"));
+                m.setDesc_tour(rs.getString("desc_tour"));
+              
+               
+          
+
+                List.add(m);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return List;
+    }
+      
+      public List<Tournoi> RechercherProduit(String x) {
+        ArrayList<Tournoi> List = new ArrayList<>();
+        try {
+            String req = "Select * from tournoi where nom_tour like '%" + x + "%' or nbr_joueur like '%" + x + "%' or desc_tour like '%" + x + "%'  ";
+            System.out.println("aa: "+x);
+       PreparedStatement pre = connexion.prepareStatement(req);
+
+            ResultSet rs = pre.executeQuery(req);
+                while (rs.next()) {
+                    Tournoi m = new Tournoi();
+
+              
+                m.setNom_tour(rs.getString("nom_tour"));
+                m.setNbr_joueur(rs.getInt("nbr_joueur"));
+                m.setDesc_tour(rs.getString("desc_tour"));
+                    System.out.println("x:" +x);
+                    List.add(m);
+                }
+
+            
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        if (List.isEmpty()) {
+            System.out.println("NOT FOUND");
+        }
+        return List;
+    }
+    
+    
+     
 }

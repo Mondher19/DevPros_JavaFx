@@ -17,7 +17,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="79.0" text="Ajout d'un Tournoi" textFill="#ee0000">
+            <Label fx:id="titre" layoutX="79.0" text="Ajout d'un Tournoi" textFill="#ee0000">
                <font>
                   <Font name="Ink Free" size="37.0" />
                </font>
@@ -28,7 +28,7 @@
                </font>
             </Label>
             <TextField fx:id="ttour" layoutX="199.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" promptText="Nom" />
-            <Button layoutX="221.0" layoutY="328.0" mnemonicParsing="false" onAction="#BtnAjouterP" style="-fx-background-color: white;" text="Ajouter">
+            <Button fx:id="ajoutbtn" layoutX="221.0" layoutY="328.0" mnemonicParsing="false" onAction="#BtnAjouterP" style="-fx-background-color: white;" text="Ajouter">
                <font>
                   <Font name="Javanese Text" size="13.0" />
                </font>
