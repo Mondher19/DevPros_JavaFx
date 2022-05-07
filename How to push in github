@@ -1,0 +1,10 @@
+
+
+1- git init 
+2- git checkout -b your_branch_name
+3- git add .
+4- git commit -m "A Note"
+5- git push
+6- git remote add arigin your_github_URL
+7- git push origin
+8- git push
